@@ -12,6 +12,9 @@ start_btn.addEventListener("click", classifyImage);
 start_btn.innerText = "Start Analyse";
 document.querySelector("body").appendChild(start_btn);
 
+const guess = document.getElementById("guess")
+
+
 let nn
 const speech = window.speechSynthesis;
 const voices = window.speechSynthesis.getVoices();
@@ -32,6 +35,7 @@ function classifyImage() {
             // if (v.lang != 'en') continue;
             const btn = document.createElement('button');
             btn.addEventListener("click", () => {
+                guess.innerText = `Thissa: ${res[0].label}`
                 let utterThis = new SpeechSynthesisUtterance(`Thissa: ${res[0].label}`);
                 utterThis.voice = v;
                 speak(utterThis);
