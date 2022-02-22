@@ -14,7 +14,6 @@ document.querySelector("body").appendChild(start_btn);
 
 const guess = document.getElementById("guess")
 
-
 let nn
 const speech = window.speechSynthesis;
 const voices = window.speechSynthesis.getVoices();
@@ -53,3 +52,17 @@ function speak(utterThis) {
         speech.speak(utterThis);
     }
 }
+
+// turnonwebcam()
+
+// function turnonwebcam() {
+//     if (navigator.mediaDevices.getUserMedia) {
+//         navigator.mediaDevices.getUserMedia({ video: true })
+//             .then((stream) => {
+//                 video.srcObject = stream
+//             })
+//             .catch((err) => {
+//                 console.log("Something went wrong!");
+//             });
+//     }
+// }
